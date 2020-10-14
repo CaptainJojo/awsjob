@@ -1,0 +1,40 @@
+type BillSplittingGroup
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        queries: [get, list]
+        mutations: [create, update, delete]
+      }
+      { allow: groups, groups: ["Admin"] }
+    ]
+  ) {
+  id: ID!
+  bill: Bill!
+  transactions: [Transaction!]!
+}
+
+type Bill
+  @model
+  @auth(rules: [{ allow: owner }, { allow: groups, groups: ["Admin"] }]) {
+  id: ID!
+  title: String!
+  amount: Float!
+}
+
+type Transaction
+  @model
+  @auth(
+    rules: [
+      { allow: owner }
+      { allow: groups, groups: ["Admin"] }
+      { allow: owner, ownerField: "user", queries: [get, list] }
+    ]
+  ) {
+  id: ID!
+  user: String!
+  amount: Float!
+  isPay: Boolean!
+    @auth(rules: [{ allow: owner, ownerField: "user", operations: [update] }])
+}
