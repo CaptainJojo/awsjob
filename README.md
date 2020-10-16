@@ -18,6 +18,12 @@ You see this message in your console.
 
 You could deploy direclty on push your git branch.
 
+## GraphQL API
+
+To test graphql api you need to go at console appSync with this command
+
+`amplify api console` and select > Graphql
+
 ## Available Scripts
 
 In the project directory, you can run:
