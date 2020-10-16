@@ -16,6 +16,12 @@ You see this message in your console.
 
 ![amplify init](doc/init.png)
 
+or use
+
+`amplify pull`
+
+to get the backend side
+
 You could deploy direclty on push your git branch.
 
 ## GraphQL API

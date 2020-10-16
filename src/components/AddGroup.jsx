@@ -37,6 +37,9 @@ export default function AddGroup({ user, groups, setAddCompleted }) {
     <>
       {!isCustomer ? (
         <Button
+          color="primary"
+          variant="contained"
+          style={{ margin: "2px" }}
           onClick={() =>
             addToGroup({ username: user.Username, groupname: "customer" })
           }
@@ -44,10 +47,13 @@ export default function AddGroup({ user, groups, setAddCompleted }) {
           Add to Customer
         </Button>
       ) : (
-        ""
+        " "
       )}
       {!isAdmin ? (
         <Button
+          color="primary"
+          variant="contained"
+          style={{ margin: "2px" }}
           onClick={() =>
             addToGroup({ username: user.Username, groupname: "admin" })
           }

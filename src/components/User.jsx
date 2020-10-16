@@ -56,6 +56,9 @@ export default function User({ user }) {
         {groups.map((group, index) => (
           <Fragment key={index}>
             <Button
+              color="secondary"
+              variant="contained"
+              style={{ margin: "2px" }}
               onClick={() =>
                 deleteToGroup({
                   username: user.Username,

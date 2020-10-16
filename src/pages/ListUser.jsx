@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Auth, API } from "aws-amplify";
 import User from "../components/User";
-
+import Paper from "@material-ui/core/Paper";
 export default function ListUser() {
   const [users, setUsers] = useState([]);
 
@@ -30,9 +30,11 @@ export default function ListUser() {
 
   return (
     <div>
-      {users.map((user, index) => (
-        <User key={index} user={user} />
-      ))}
+      <Paper>
+        {users.map((user, index) => (
+          <User key={index} user={user} />
+        ))}
+      </Paper>
     </div>
   );
 }
