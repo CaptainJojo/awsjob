@@ -59,7 +59,7 @@ function App() {
                 </Route>
               </>
             ) : (
-              "You need admin privilege"
+              "You need admin privileges"
             )}
           </Layout>
         </Switch>

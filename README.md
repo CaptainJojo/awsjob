@@ -16,11 +16,7 @@ You see this message in your console.
 
 ![amplify init](doc/init.png)
 
-To deploy manualy it's
-
-`amplify publish`
-
-But you could deploy direclty on push your git branch.
+You could deploy direclty on push your git branch.
 
 ## Available Scripts
 
